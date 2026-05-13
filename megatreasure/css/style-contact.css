@@ -1,0 +1,479 @@
+﻿/* =========================================
+   Root Variables (ชุดสีธีมของเว็บไซต์)
+========================================= */
+:root {
+    --bg-color: #0a1410;
+    --card-bg: #121e18;
+    --input-bg: #1a2b22;
+    --primary-color: #10b981;
+    --text-muted: #a0aec0;
+}
+
+/* =========================================
+   🌌 Background ทั้งหน้า (Gradient + Glow)
+========================================= */
+body {
+    font-family: 'Kanit', sans-serif;
+    background:
+        radial-gradient(circle at 50% 40%, rgba(16, 185, 129, 0.08), transparent 60%),
+        radial-gradient(circle at 80% 10%, rgba(16, 185, 129, 0.05), transparent 50%),
+        linear-gradient(to bottom, #08120e, var(--bg-color));
+}
+
+/* =========================================
+   Page Header (Gradient สวยขึ้น)
+========================================= */
+.page-header { 
+    padding: 120px 20px 60px; 
+    text-align: center; 
+
+    background:
+        linear-gradient(to bottom, rgba(16, 185, 129, 0.25), transparent 70%),
+        linear-gradient(to bottom, transparent, var(--bg-color));
+}
+.page-header h1 { 
+    font-size: 45px; 
+    margin-bottom: 10px; 
+    text-transform: uppercase; 
+    font-weight: 300; 
+    letter-spacing: 2px; 
+    color: #ffffff;
+}
+.page-header h1 span { 
+    color: var(--primary-color); 
+    font-weight: bold; 
+    text-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+}
+.page-header p { 
+    color: var(--text-muted); 
+    font-size: 18px; 
+    font-weight: 300; 
+}
+
+/* =========================================
+   Contact Container & Info
+========================================= */
+.contact-container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 40px 20px 80px; 
+    display: grid; 
+    grid-template-columns: 1fr 1.2fr; 
+    gap: 50px; 
+    align-items: center;
+}
+.contact-info h2 { 
+    font-size: 30px; 
+    margin-bottom: 20px; 
+    font-weight: 300; 
+    color: #ffffff;
+}
+.contact-info p { 
+    color: var(--text-muted); 
+    line-height: 1.6; 
+    margin-bottom: 30px; 
+}
+.info-box { 
+    display: block; 
+    align-items: flex-start; 
+    margin-bottom: 25px; 
+    background: var(--card-bg); 
+    padding: 20px; 
+    border-radius: 0; 
+    border-left: 4px solid var(--primary-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    transition: 0.3s; 
+}
+.info-box:hover { 
+    transform: translateX(10px); 
+    background: rgba(16, 185, 129, 0.05);
+    border-left-color: #34d399;
+}
+.info-icon { 
+    font-size: 24px; 
+    color: var(--primary-color); 
+    margin-right: 20px; 
+    min-width: 30px; 
+}
+.info-text h4 { 
+    margin-bottom: 5px; 
+    font-size: 18px; 
+    font-weight: 500; 
+    color: #ffffff;
+}
+.info-text p { 
+    margin-bottom: 0; 
+    font-size: 15px; 
+}
+
+/* =========================================
+   Contact Video
+========================================= */
+.contact-video { 
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background: var(--card-bg); 
+    padding: 0; 
+    border-radius: 15px; 
+    border: 2px solid rgba(16, 185, 129, 0.3); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+    overflow: hidden;
+    width: 100%;
+    height: 450px;
+}
+.contact-video video,
+.contact-video iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+}
+
+/* =========================================
+   Contact Form
+========================================= */
+.contact-form { 
+    background: var(--card-bg); 
+    padding: 40px; 
+    border-radius: 15px; 
+    border: 1px solid rgba(16, 185, 129, 0.2); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+.contact-form h3 { 
+    margin-bottom: 25px; 
+    font-size: 24px; 
+    font-weight: 300; 
+    color: #ffffff;
+}
+.form-group { 
+    margin-bottom: 20px; 
+}
+.form-group label { 
+    display: block; 
+    margin-bottom: 8px; 
+    color: var(--text-muted); 
+    font-size: 14px; 
+}
+.form-control { 
+    width: 100%; 
+    padding: 15px; 
+    background: var(--input-bg); 
+    border: 1px solid rgba(16, 185, 129, 0.3); 
+    border-radius: 8px; 
+    color: #fff; 
+    font-size: 16px; 
+    outline: none; 
+    transition: 0.3s; 
+}
+.form-control:focus { 
+    border-color: var(--primary-color); 
+    background: rgba(16, 185, 129, 0.05); 
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.2);
+}
+textarea.form-control { 
+    resize: vertical; 
+    min-height: 120px; 
+}
+.submit-btn { 
+    background: var(--primary-color);
+    color: #ffffff; 
+    border: none; 
+    padding: 15px 30px; 
+    font-size: 16px; 
+    font-weight: bold;
+    border-radius: 8px; 
+    cursor: pointer; 
+    transition: 0.3s; 
+    width: 100%; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+}
+.submit-btn:hover { 
+    background: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
+}
+
+/* =========================================
+   Map Section
+========================================= */
+.map-section { 
+    width: 100%; 
+    height: 400px; 
+    background: var(--bg-color); 
+    border-top: 2px solid var(--primary-color);
+}
+.map-section iframe { 
+    width: 100%; 
+    height: 100%; 
+    border: none; 
+    filter: brightness(90%) contrast(110%); 
+}
+
+/* =========================================
+   Responsive 
+========================================= */
+@media (max-width: 900px) { 
+    .contact-container { 
+        grid-template-columns: 1fr; 
+    } 
+    .contact-form { 
+        padding: 30px 20px; 
+    } 
+}
+
+/* Skeleton Loading */
+body.is-loading {
+    overflow: hidden;
+}
+
+body.is-loading > *:not(.skeleton-loader) {
+    visibility: hidden;
+}
+
+body.page-ready > *:not(.skeleton-loader) {
+    visibility: visible;
+}
+
+.skeleton-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    background: #0f1417;
+    transition: opacity 0.35s ease;
+}
+
+body.is-loading .skeleton-loader {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+body.page-ready .skeleton-loader {
+    opacity: 0;
+}
+
+.sk-topbar,
+.sk-thumb,
+.sk-line,
+.sk-tags,
+.sk-dot {
+    position: relative;
+    overflow: hidden;
+    background: #1c2429;
+    border-radius: 0;
+}
+
+.sk-shimmer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.18) 50%, rgba(255,255,255,0) 100%);
+    animation: skeleton-shimmer 1.25s infinite;
+}
+
+.sk-wrap,
+.sk-canvas {
+    width: min(1200px, 94vw);
+    margin: 92px auto 0;
+}
+
+.sk-wrap {
+    display: grid;
+    gap: 20px;
+}
+
+.sk-topbar {
+    height: 76px;
+    border-radius: 0;
+}
+
+.sk-line {
+    height: 14px;
+    margin-bottom: 10px;
+}
+
+.sk-title {
+    height: 42px;
+    width: min(520px, 72%);
+}
+
+.sk-mid {
+    width: 76%;
+}
+
+.sk-short {
+    width: 58%;
+}
+
+.sk-thumb {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+}
+
+.sk-panel {
+    background: #151d21;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.sk-product-head,
+.sk-product-grid,
+.sk-about-hero,
+.sk-about-main,
+.sk-about-values-head,
+.sk-about-values-grid,
+.sk-section,
+.sk-hero,
+.sk-grid,
+.sk-split,
+.sk-map {
+    display: none;
+}
+
+/* Product skeleton: portfolio header + gallery cards */
+body.skeleton-product .sk-product-head,
+body.skeleton-product .sk-product-grid {
+    display: grid;
+}
+
+body.skeleton-product .sk-product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.sk-pcard {
+    background: #151d21;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.sk-pcard .sk-thumb {
+    margin-bottom: 10px;
+}
+
+.sk-tags {
+    height: 28px;
+    width: 46%;
+    border-radius: 999px;
+    margin-top: 8px;
+}
+
+/* About skeleton: hero + split content + values cards */
+body.skeleton-about .sk-about-hero,
+body.skeleton-about .sk-about-main,
+body.skeleton-about .sk-about-values-head,
+body.skeleton-about .sk-about-values-grid {
+    display: grid;
+}
+
+body.skeleton-about .sk-about-main {
+    grid-template-columns: 1.15fr 1fr;
+    gap: 16px;
+}
+
+.sk-portrait {
+    aspect-ratio: 4 / 5;
+}
+
+body.skeleton-about .sk-about-values-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.sk-vcard {
+    background: #151d21;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 14px;
+}
+
+.sk-dot {
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+}
+
+/* Keep existing fallback template (home/contact currently uses sk-section) */
+body.skeleton-home .sk-hero,
+body.skeleton-home .sk-grid,
+body.skeleton-contact .sk-hero,
+body.skeleton-contact .sk-split,
+body.skeleton-contact .sk-map {
+    display: grid;
+}
+
+body.skeleton-home .sk-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+body.skeleton-home .sk-card:nth-child(n+4) {
+    display: none;
+}
+
+body.skeleton-contact .sk-split {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.sk-mapbox {
+    aspect-ratio: 16 / 5;
+}
+
+@keyframes skeleton-shimmer {
+    to { transform: translateX(100%); }
+}
+
+@media (max-width: 1024px) {
+    body.skeleton-product .sk-product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .sk-wrap,
+    .sk-canvas {
+        margin-top: 84px;
+        gap: 14px;
+    }
+
+    .sk-title {
+        height: 34px;
+        width: 84%;
+    }
+
+    .sk-line {
+        height: 12px;
+    }
+
+    body.skeleton-product .sk-product-grid,
+    body.skeleton-about .sk-about-values-grid,
+    body.skeleton-home .sk-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    body.skeleton-about .sk-about-main,
+    body.skeleton-contact .sk-split {
+        grid-template-columns: 1fr !important;
+    }
+
+    .sk-pcard:nth-child(n+5) {
+        display: none;
+    }
+
+    .sk-mapbox {
+        aspect-ratio: 16 / 7;
+    }
+}
+
+
+
+
